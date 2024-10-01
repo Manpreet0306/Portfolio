@@ -787,12 +787,12 @@ footer{
         margin-left: 1px;
     }
 }
-@media(max-width:393px){
+@media(max-width:405px){
     .nav-item-icon{
-        width: 122px;
+        width: 108px;
     }
     .slider{
-        left: -7px;
+        left: -25px;
     }
 }
 @media(max-width:835px)and (min-width:650px){
@@ -843,6 +843,12 @@ footer{
         left: 0px;
     }
  } 
+ @media(max-width:450px){
+    .hero-section-sub-heading{
+        display: flex;
+        flex-direction: column;
+    }
+ }
  @media (max-width:1210px) {
     .skills-container{
         margin: 1rem 10rem 1rem 1rem;
