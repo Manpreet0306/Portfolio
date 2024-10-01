@@ -24,3 +24,7 @@ const div1 = document.querySelector('.nav-logo');
     btn4.addEventListener('click',function(){
         window.location.href=" https://manpreet0306.github.io/Password_GEN/";
     });
+    const hireme=document.getElementById('btn');
+    hireme.addEventListener('click',function(){
+        window.location.href="#contactme";
+    });
