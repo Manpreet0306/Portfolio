@@ -388,12 +388,13 @@ a{
     top: -43px;
 }
 .project-content{
+    width: 443px;
     position:absolute;
     display: flex;
     flex-direction: column;
     color: white;
     padding: 2em;
-    bottom: 20%;
+    bottom: 9%;
     z-index: 5;
     gap:1em;
     transition: all 0.4s;
@@ -402,7 +403,7 @@ a{
     left: 6%;
 }
 .project-content-right{
-    right: -31%;
+    right: -8%;
 }
 .project-skill-container{
     width: 60%;
