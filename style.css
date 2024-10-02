@@ -652,6 +652,9 @@ left: -24px;
     border: none;
     margin: 17px;
 }
+.formfield.error{
+    border: 2px solid red;
+}
 .formfield-textarea{
     height: auto;
     padding-top: 1rem;
