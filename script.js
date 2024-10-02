@@ -76,11 +76,9 @@ const message = document.getElementById('Message');
 function SendEmail() {
     const bodymessage = `fullName: ${fullname.value}<br> Email: ${email.value}<br> subject: ${subject.value}<br> message: ${message.value}<br>`;
     Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "chokkarpreet@gmail.com",
-        Password: "7428039A1B3BB0778E7A5AF2806323D09CF3",
+        SecureToken :"9c5bc763-9036-4d0d-b1c4-dea3e2779c35 ",
         To: 'chokkarpreet@gmail.com',
-        From: email.value,
+        From: "chokkarpreet@gmail.com",
         Subject: subject.value,
         Body: bodymessage
     }).then(
@@ -151,5 +149,7 @@ form.addEventListener("submit", (e) => {
     checkinput();
     if (!fullname.classList.contains("error") && !email.classList.contains ("error") && !subject.classList.contains("error") && !message.classList.contains("error")) {
         SendEmail();
+        form.reset();
+        return false;
     }
 })
