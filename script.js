@@ -76,7 +76,7 @@ const message = document.getElementById('Message');
 function SendEmail() {
     const bodymessage = `fullName: ${fullname.value}<br> Email: ${email.value}<br> subject: ${subject.value}<br> message: ${message.value}<br>`;
     Email.send({
-        SecureToken :"9c5bc763-9036-4d0d-b1c4-dea3e2779c35 ",
+        SecureToken :"51c1b826-6dff-40b0-8992-39adcc4af80e",
         To: 'chokkarpreet@gmail.com',
         From: "chokkarpreet@gmail.com",
         Subject: subject.value,
