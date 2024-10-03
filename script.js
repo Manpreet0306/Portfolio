@@ -1,13 +1,34 @@
-const div1 = document.querySelector('.nav-logo');
-const div2 = document.querySelector('.slider');
+// const div1 = document.querySelector('.nav-logo');
+// const div2 = document.querySelector('.slider');
 
-div1.addEventListener('click', function () {
-    div2.classList.toggle('active');
-    // Toggle the 'active' class on click
-});
-div1.addEventListener('click', function () {
-    div1.classList.toggle('active1'); // Toggle the 'active' class on click
-});
+// div1.addEventListener('click', function () {
+//     div2.classList.toggle('active');
+//     // Toggle the 'active' class on click
+// });
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const section = document.querySelector(".hero-section");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    section.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    const section = document.querySelector(".hero-section");
+
+}
+
 const btn1 = document.querySelector('.btn-grp1');
 btn1.addEventListener('click', function () {
     window.location.href = "https://github.com/Manpreet0306/Notepad.git";

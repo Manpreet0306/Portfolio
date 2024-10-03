@@ -14,98 +14,132 @@
     margin: 0 auto;
 }
 
-.navbar{
-    display: flex;
-    padding-top: 1rem;
-    margin-left: 187px;
-    
-  align-items: center;
-  gap: 360px;
-}
-.logo-container{
-    display: flex;
-    justify-content:baseline;
-    align-items: center;
-}
-.logo{
-    width: 53px;
-}
-.logo-text{
-    margin-left: -0.2rem;
-    font-size: 41px;
-    font-family: 'Marhey', sans-serif;
-   
-}
-.nav-item{
-    display: flex;
-    gap: 2rem;
-    font-weight: 500;
-    padding: 0 4em;
-}
-.nav-item-icon{
-    display: none;
-}
-.nav-{
-    display: flex;
-    flex-direction: column;
+
+li {
+    list-style: none;
 }
 
-.slider{
-    width: 230px;
-    display:none;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    gap: 4px;
-    top: 30px;
-  left: 119px;
-  transition: all 0.5s;
-}
-.slider a {
+a {
     text-decoration: none;
-    color:  #343d68;
-    font-size: 20px;
 }
-.active{
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
+    width: 100%;
+
+}
+
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
 }
-.active1{
-    top: 30px;
+
+.hamburger {
+    display: none;
 }
-.nav-logo {
-    width: 40px;
-position: relative;
+.logo{
+    color: orangered;
+    font-weight: bold;
 }
-.nav-logo :hover + .slider{
-   display: flex;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
 }
-.slider a:hover{
-    color:orangered;
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.nav-item div{
-    font-size: 20px;
-    cursor: pointer;
+
+.nav-item {
+    margin-left: 5rem;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
-a{
-    text-decoration: none;
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
 }
-.nav-item div a{
+
+.nav-link:hover{
+    color: orangered;
+}
+.nav-item:hover{
+    color: orangered;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
     color: black;
-    transition: all 0.5s;
+    font-family: "Tangerine", cursive;
 }
-.nav-item div a:hover{
-     transition: 0.8s;
-    color: orangered; 
+
+
+@media only screen and (max-width: 649px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4.5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .header{
+        position: fixed;
+  background-color: white;
+  z-index: 10;
+    }
+
 }
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .hero-section{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    margin: 4rem auto;
+    gap: 4rem;
+    margin: 8rem auto;
     padding: 0 1rem;
+}
+.hero-section.active{
+    margin-top: 422px;
 }
 .fadded-text{
     user-select: none;
@@ -617,12 +651,14 @@ left: -24px;
     color: orangered;
     padding-top: 2rem;
     font-family: 'Be Vietnam Pro', sans-serif;
+    padding-left: 10px;
 }
 .contact-sub-heading{
     font-size: 3rem;
     color: #343d68aa;
     text-transform: capitalize;
     font-family: 'Be Vietnam Pro', sans-serif;
+    padding-left: 10px;
 }
 .contactus-form-container{
     margin-top: 25px;
@@ -736,15 +772,15 @@ footer{
         margin: 0px;
     }
 }
-@media (max-width:1170px){
+/* @media (max-width:1170px){
     .navbar{
         gap: 149px;
     }
-}
+} */
 @media (max-width:920px){
-    .navbar{
+    /* .navbar{
         gap: 0px;
-    }
+    } */
     .user-image img{
         height: 180px;
   width: 152px;
@@ -756,14 +792,14 @@ footer{
 }
 
 @media (max-width:770px){
-    .nav-item{
+    /* .nav-item{
         display: none;
     } 
     .nav-item-icon{
         display: flex;
         width: 250px;
         justify-content: flex-end;
-    }
+    } */
     .hero-section-sub-heading {
         font-size: 33px;
         line-height: 1px;
@@ -773,32 +809,32 @@ footer{
       }
 
 }
-@media (max-width:675px){
+/* @media (max-width:675px){
     .navbar{
         margin-left: 100px;
     }
-}
-@media(max-width:584px){
+} */
+/* @media(max-width:584px){
     .nav-item-icon{
         width: 162px;
     }
     .slider{
         left: 30px;
     }
-}
-@media(max-width:495px){
+} */
+/* @media(max-width:495px){
     .navbar{
         margin-left: 1px;
     }
-}
-@media(max-width:405px){
+} */
+/* @media(max-width:405px){
     .nav-item-icon{
         width: 108px;
     }
     .slider{
         left: -25px;
     }
-}
+} */
 @media(max-width:835px)and (min-width:650px){
     .hero-section-left{
         left: 62px;
@@ -925,5 +961,13 @@ footer{
     }
     .blob-style{
         width: 150px;
+    }
+ }
+ @media (max-width:482px){
+    .contactus-heading{
+        font-size: 3rem;
+    }
+    .contact-sub-heading{
+        font-size: 2rem;
     }
  }
