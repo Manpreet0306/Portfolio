@@ -25,8 +25,7 @@ navLink.forEach(n => n.addEventListener("click", closeMenu));
 function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-    const section = document.querySelector(".hero-section");
-
+    section.classList.remove("active");
 }
 
 const btn1 = document.querySelector('.btn-grp1');
